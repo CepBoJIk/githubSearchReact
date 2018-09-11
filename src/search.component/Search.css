@@ -1,0 +1,123 @@
+.search {
+  font-family: 'Roboto', sans-serif;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  padding: 25px 0;
+}
+
+@media screen and (max-width: 680px) {
+  .searchForm {
+    flex-direction: column;
+  }
+
+  .select-wrapper {
+    flex: 0 0 100%;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  .searchFrom__keywords {
+    flex: 0 0 100%;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+}
+
+.select-wrapper {
+  position: relative;
+  flex: 1 0 auto;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+.select-wrapper .select {
+  position: relative;
+  border-bottom: 1px solid #0366D6;
+  padding: 7px 15px 7px 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+}
+
+.select-wrapper .select::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -4px;
+  width: 0;
+  height: 0;
+  border-top: 9px solid #000;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.select-wrapper .options {
+  min-width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #F1F8FE;
+  z-index: 99;
+}
+
+.select-wrapper .options.hidden {
+  display: none;
+}
+
+.select-wrapper .options li {
+  padding: 3px 7px;
+  border-bottom: 1px solid #E1E4E8;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+}
+
+.select-wrapper .options li:last-child {
+  border-bottom: 0;
+}
+
+.select-wrapper .options li:hover {
+  background-color: #E1E4E8;
+}
+
+.searchFrom__keywords {
+  position: relative;
+  flex: 1 1 auto;
+  margin-right: 25px;
+}
+
+.searchFrom__keywords input {
+  border: none;
+  width: 100%;
+  border-bottom: 2px solid #0366D6;
+  padding: 6px 15px 6px 0;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.searchFrom__keywords span {
+  position: absolute;
+  top: -12px;
+  left: 0;
+  color: #0366D6;
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.searchForm button[type='submit'] {
+  border: none;
+  line-height: 36px;
+  padding: 0 36px;
+  color: #fff;
+  background-color: #0366D6;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+}
