@@ -1,33 +1,7 @@
-.viewFilter {
-  display: flex;
-  justify-content: flex-end;
-  padding-bottom: 30px;
-}
-
-.viewFilter__tile,
-.viewFilter__line {
-  border: none;
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.viewFilter__tile {
-  margin-right: 10px;
-}
-
-.viewFilter button.active path {
-  fill: #3C4146;
-}
-
-.viewFilter button.active line {
-  stroke: #3C4146;
-}
-
 .repositories {
   display: flex;
   flex-wrap: wrap;
+  font-family: 'Roboto', sans-serif;
 }
 
 .repositories.repository_tile {
@@ -97,6 +71,10 @@
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
 }
 
+.repository__checkbox button.hidden {
+  display: none;
+}
+
 .repositories.repository_tile .repository:nth-child(2n) {
   margin-right: 0;
 }
@@ -108,7 +86,7 @@
   padding-left: 33px;
   font-size: 18px;
   line-height: 30px;
-  background: url(/assets/star.svg) no-repeat left top;
+  background: url(../img/star.svg) no-repeat left top;
 }
 
 .repository__language {
@@ -178,9 +156,10 @@
 
 .repositories-not-found {
   text-align: center;
-  background: url(/assets/github-ic.svg) no-repeat center center;
+  background: url(../img/github-ic.svg) no-repeat center center;
   min-height: 200px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .repositories-not-found h1 {

@@ -1,3 +1,11 @@
+@media screen and (max-width: 680px) {
+  .select-wrapper {
+    flex: 0 0 100%;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
 .select-wrapper {
   position: relative;
   flex: 1 0 auto;

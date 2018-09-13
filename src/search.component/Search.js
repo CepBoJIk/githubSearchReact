@@ -1,33 +1,24 @@
 import React, { Component } from 'react';
 import './Search.css';
-import Select from '../select.component/Select';
 
-const repositoriesTypes = ['Repositories'];
-const languageTypes = ['javascript', 'css', 'html', 'php', 'ruby', 'c++', 'python', 'c#', 'java', 'go', 'haskel'];
+import Form from '../form.component/Form';
+import RepositoryView from '../repository-view.component/RepositoryView';
+import RepositoryDisplay from '../repository-display.component/RepositoryDisplay';
 
-class Search extends React.Component {
-  state = {
-    repositoryType: '',
-    repositoryLanguage: '',
-    keywords: '',
-  }
-
-  changeStateValue = (value, key) => {
-    this.setState({[key]: value});
-  }
+class Search extends Component {
 
   render() {
+    const {saveData, savedData, data, changeRequestStatus, repositoryViewType, changeView, toggleSavedData} = this.props;
+
     return (
-      <form>
-        <Select data={repositoriesTypes} stateKey='repositoryType' changeStateValue={this.changeStateValue} />
-        <Select data={languageTypes} stateKey='repositoryLanguage' changeStateValue={this.changeStateValue} />
-        <div class="searchFrom__keywords">
-          <label>
-            <span>Type here for search</span>
-            <input type="text" />
-          </label>
-        </div>
-      </form>
+      <React.Fragment>
+        <Form {...{ changeRequestStatus, saveData }}/>
+        <RepositoryView {...{ repositoryViewType, changeView }} />
+
+        <RepositoryDisplay {...{ data, savedData, toggleSavedData }} 
+            hasRequestSent={this.props.isRequestSent}
+            viewType={this.props.repositoryViewType} />
+      </React.Fragment>
     )
   }
 }

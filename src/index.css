@@ -58,3 +58,7 @@ input, button, select {
 * {
   box-sizing: border-box;
 }
+
+#root {
+  height: 100%;
+}

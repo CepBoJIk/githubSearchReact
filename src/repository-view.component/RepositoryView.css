@@ -1,0 +1,26 @@
+.viewFilter {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 30px;
+}
+
+.viewFilter__tile,
+.viewFilter__line {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.viewFilter__tile {
+  margin-right: 10px;
+}
+
+.viewFilter button.active path {
+  fill: #3C4146;
+}
+
+.viewFilter button.active line {
+  stroke: #3C4146;
+}
