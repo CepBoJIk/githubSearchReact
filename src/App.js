@@ -68,11 +68,13 @@ class App extends Component {
         <div className="content">
           <header>
             <div className="logo">
-              <img className='logo__img' src={logo} alt='logo'/>
-              <div className="logo__text">
-                <h1>GitHub</h1>
-                <p>search</p>
-              </div>
+              <NavLink to='/search'>
+                <img className='logo__img' src={logo} alt='logo'/>
+                <div className="logo__text">
+                  <h1>GitHub</h1>
+                  <p>search</p>
+                </div>
+              </NavLink>
             </div>
             <nav>
               <NavLink to='/search' activeClassName="active">Search</NavLink>
